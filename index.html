@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatintheGit? | Repo Decoder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">WHATINTHE<span>GIT?</span></h1>
+            <p class="tagline">Stop reading jargon. Start understanding purpose.</p>
+        </header>
+
+        <main>
+            <section class="search-card">
+                <div class="input-group">
+                    <input type="text" id="repoUrl" placeholder="Paste GitHub Repository URL (e.g., https://github.com/user/repo)" autocomplete="off">
+                    <button id="decodeBtn">DECODE PROJECT</button>
+                </div>
+                <p class="hint">Works with any public GitHub repository.</p>
+            </section>
+
+            <section id="results" class="hidden">
+                <div class="skeleton" id="loader">
+                    <div class="skeleton-line hero"></div>
+                    <div class="skeleton-line text"></div>
+                    <div class="skeleton-line text"></div>
+                    <div class="skeleton-grid">
+                        <div class="skeleton-card"></div>
+                        <div class="skeleton-card"></div>
+                        <div class="skeleton-card"></div>
+                    </div>
+                </div>
+
+                <div id="content" class="hidden">
+                    <div class="complexity-badge" id="resComplexity">Medium Complexity</div>
+                    <h2 class="one-liner" id="resOneLiner">The 10-word punchy definition goes here.</h2>
+                    
+                    <div class="value-prop">
+                        <h3>Value Proposition</h3>
+                        <p id="resValueProp">Detailed description of why this project exists and what problem it solves.</p>
+                    </div>
+
+                    <div class="functional-map">
+                        <h3>The 'Lego' Breakdown</h3>
+                        <div class="buckets-grid" id="resBuckets">
+                            <!-- Functional buckets will be injected here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Built with 🔴 by Antigravity</p>
+        </footer >
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
